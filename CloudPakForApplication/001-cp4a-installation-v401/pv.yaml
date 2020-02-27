@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+ name: tanfspv
+ labels:
+   pvc_for_app: "ta"
+spec:
+ capacity:
+   storage: 8Gi
+ accessModes:
+ - ReadWriteMany
+ nfs:
+   path: /nfsshare/ta
+   server: x.x.x.x
+ persistentVolumeReclaimPolicy: Recycle

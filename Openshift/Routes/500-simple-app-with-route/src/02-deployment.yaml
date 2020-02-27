@@ -1,0 +1,26 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: g-app-store-deployment
+  namespace: g-app-store-pro
+  labels:
+    app: g-app-store-app
+    name: g-app-store-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: g-app-store-app
+      name: g-app-store-deployment
+  template:
+    metadata:
+      labels:
+        app: g-app-store-app
+        name: g-app-store-deployment
+    spec:
+      containers:
+        - name: g-app-store-deployment
+          image: gandhicloud/g-app-store
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080

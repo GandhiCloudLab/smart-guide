@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: g-app-store-service
+  namespace: g-app-store-pro
+  labels:
+    app: g-app-store-app
+    name: g-app-store-service
+spec:
+  ports:
+    - name: main-container
+      port: 8080
+      targetPort: 8080
+  selector:
+    name: g-app-store-deployment

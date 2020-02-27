@@ -1,0 +1,15 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: g-app-store-route
+  namespace: g-app-store-pro
+  labels:
+    app: g-app-store-app
+spec:
+  path: /
+  to:
+    kind: Service
+    name: g-app-store-service
+    weight: 100
+  port:
+    targetPort: main-container
