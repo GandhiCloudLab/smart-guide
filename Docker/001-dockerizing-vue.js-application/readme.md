@@ -92,13 +92,11 @@ RUN npm run build
 
 ## Issues with this Dockerization
 
-Here are some issues in this approach.
+Exposing a service through NodePort is not a good practice. So we need to find other way to expose it.
 
-Exposing a service through NodePort is not a good practice. So we need to find other way to expose the service.
+Openshift uses a concept called `Route` to expose any service externally. We can use this route to expose the deployed service. 
 
-Openshift uses a concept called `Route` to expose any service externally. So you can create Route and expose the deployed service. 
-
-But with the above created image, when you access the application through the route, you will get an error called `Invalid Host Header`. This is because the `*application image is not created as a webserver image*`.
+But with the above created image, when you access the application through the route, you will get an error called `Invalid Host Header`
 
 This is because the image is not wrapped with Webserver. Without a webserver an application can't be accessed from outside via Proxy (route).
 
