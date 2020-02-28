@@ -1,12 +1,10 @@
 # A best Practice in Dockerizing Vue.js Application
 
-A best Practice in Dockerizing Vue.js or Node.js Application
-
 In this document, we will explain a very important Best Practice in Dockerizing the Vue.js application. The same could be applicable for any Node.js applications as well.
 
 ## Tags
 
-Openshift, Kubernetes, Route, Router, Vue.js, Node.js, NGINX, Webserver
+Openshift, Kubernetes, Route, Router, Vue.js, Node.js, NGINX, Webserver, Docker, Dockerfile
 
 ## About Vue.js
 
@@ -31,10 +29,10 @@ $ vue create vue-app
 3. Build and test the App.
 
 ```
-$ cd vue- app
+$ cd vue-app
 $ npm run build
 ```
-This will create a production ready minimalistic version of your single page application in /dist folder. You will have index.html in it.
+This will create a production ready minimalistic version of your single page application in `/dist` folder. You will have `index.html` in it.
 
 ## Dockerize the App
 
@@ -98,13 +96,17 @@ Here are some issues in this approach.
 
 Exposing a service through NodePort is not a good practice. So we need to find other way to expose the service.
 
-In Openshift uses a concept called `Route` to expose any service externally. So you can create Route and expose the deployed service. 
+Openshift uses a concept called `Route` to expose any service externally. So you can create Route and expose the deployed service. 
 
-But when you access the application through the route, you will get an error called `Invalid Host Header`. This is because the *application image is not created as a webserver image*.
+But with the above created image, when you access the application through the route, you will get an error called `Invalid Host Header`. This is because the `*application image is not created as a webserver image*`.
 
-The very important think to note is you need to bundle the image with a webserver in order to expose your service external to the cluster.
+This is because the image is not wrapped with Webserver. Without a webserver an application can't be accessed from outside via Proxy (route).
 
-Here you can bundle the image with `NGINX` webserver.
+```
+Always bundle the image with a webserver in order to expose your service external to the cluster.
+```
+
+Lets bundle the image with `NGINX` webserver.
 
 ## Best way to Dockerize 
 
@@ -131,7 +133,7 @@ The application would work without any issue.
 
 ## Conclusion
 
-If you want to expose any of your service to external to the cluster, it is always wrap your app with NGINX kind of webserver.
+If you want to expose any of your service external to the cluster, it is required to wrap your app with NGINX kind of webserver.
 
 ## References
 
