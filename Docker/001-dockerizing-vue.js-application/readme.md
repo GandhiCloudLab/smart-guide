@@ -1,6 +1,6 @@
 # A best Practice in Dockerizing Vue.js Application
 
-In this document, we will explain a very important Best Practice in Dockerizing the Vue.js application. The same could be applicable for any Node.js applications as well.
+This document explain a very important Best Practice in Dockerizing the Vue.js application. The same could be applicable for any Node.js applications as well.
 
 ## Tags
 
