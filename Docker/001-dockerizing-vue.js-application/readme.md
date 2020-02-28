@@ -90,7 +90,7 @@ RUN npm run build
 10.	Access the service using NodePort.
 
 
-## Issues with this Dockerization
+## Issues with this Dockerization and Solution
 
 Exposing a service through NodePort is not a good practice. So we need to find other way to expose it.
 
@@ -110,7 +110,7 @@ Lets bundle the image with `NGINX` webserver.
 
 1. Use `NGINX as FROM Image` and copy the app code into the appropriate folder.
 
-The new Dockerfile looks like this.
+The right Dockerfile looks like this.
 
 ```
 # Dockerfile
