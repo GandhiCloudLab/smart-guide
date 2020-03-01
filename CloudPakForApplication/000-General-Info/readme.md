@@ -4,13 +4,11 @@
 ## 1. Version related info
 
 [Ann Robinson]
-
 Cloud Pak for Applications v4.0.1 was released Friday, February 14th 2020.
 
 This fixpack adds support for the recent release of Red Hat OpenShift 4.3 on Intel, so Cloud Pak for Applications v4.0.1 installs and runs on both OpenShift 4.2 and OpenShift 4.3 (Intel).
 
 [Alan Little]
-
 cp4apps is not supported on OCP 4.3,  CP4apps 4.0.1 was a fixpack that enabled OCP 4.3.  So that is expected. The next version of CP4Apps will support OCP 4.3 as well.
 
 ## 2. Disable Transformation Advisor 
@@ -27,5 +25,4 @@ as noted in the knowledge center - https://www.ibm.com/support/knowledgecenter/S
 Has anyone performed air gap installation of cp4a? Provided that you have a VM to pass access to internet through a proxy.
 
 [Alan Little]
-
 Airgap is not yet supported
