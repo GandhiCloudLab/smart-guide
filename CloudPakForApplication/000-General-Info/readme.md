@@ -1,5 +1,22 @@
 # Cloud Pak for Applications General Information
 
+## Important URLs
+
+https://ibm-cloud-architecture.github.io/Learning-Kabanero-101/web/1.0.0/kabanero-overview.html
+
+https://developer.ibm.com/components/cloud-pak-for-applications/blogs/cloud-native-development-grows-up
+
+
+https://developer.ibm.com/series/solution-architects-guide-to-ibm-cloud-pak-for-applications/
+https://developer.ibm.com/series/developers-guide-to-ibm-cloud-pak-for-applications/
+
+https://cloudpak8s.io/apps/cp4a_overview/
+
+IBM Cloud Pak for Applications
+https://github.ibm.com/IBMCloudPak4Apps
+
+https://cloud.ibm.com/docs/cloud-pak-applications?topic=cloud-pak-applications-about
+
 
 ## 1. Version related info
 
@@ -26,3 +43,8 @@ Has anyone performed air gap installation of cp4a? Provided that you have a VM t
 
 [Alan Little]
 Airgap is not yet supported
+
+## 4. General
+
+[Alan Little]
+CP4Apps is only available via Operators since its initial delivery, no Helm
