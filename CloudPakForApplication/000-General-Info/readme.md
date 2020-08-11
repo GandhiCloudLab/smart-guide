@@ -2,7 +2,12 @@
 
 ## Important URLs
 
+Kabanero Overview
 https://ibm-cloud-architecture.github.io/Learning-Kabanero-101/web/1.0.0/kabanero-overview.html
+
+Configure CodeWind with Appsody CLI
+https://ibm-cloud-architecture.github.io/Learning-Kabanero-101/web/1.0.0/codewind-setup-appsody.html
+
 
 https://developer.ibm.com/components/cloud-pak-for-applications/blogs/cloud-native-development-grows-up
 
