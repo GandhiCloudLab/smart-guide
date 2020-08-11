@@ -22,7 +22,7 @@ Create a pod with name = `my-pod` and image = `redis`
 
 Edit the image of the pod with image = `redis:6.0`
 
-Observation : The POD is not recreated. The same POD exists only the container is recreated.
+Observation : The POD is not recreated. The same POD exists, only the container is recreated.
 
 Explanation : POD might contain more than one containers and it is not required to recreate the POD when the image of one container is changed.
 
