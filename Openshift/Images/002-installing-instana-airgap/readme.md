@@ -5,7 +5,7 @@ This article explains about how to install Instana through Operator in Openshift
 In DMZ, the images refered in the instana operators can't be downloaded from docker.io. This article explains about how to use private registry to solve this probelm.
 
 
-There are 2 images available here.
+There are 2 images used in Instana.
 
 - Instana Operator image 
 - Instana Agent image 
@@ -28,7 +28,7 @@ git clone https://github.com/instana/instana-agent-operator.git
 
 ### 3. Prefix Private registry in Instana Agent image 
 
-1. From the cloned directory, open the file `instana-agent-operator/deploy/instana-agent.customresource.yaml`
+1. From the cloned directory, open the file `deploy/instana-agent.customresource.yaml`
 
 
 
@@ -52,10 +52,10 @@ The resulted file could look like this.
   ....
 
   spec:
-  agent.image: myregistry.mydomain.io/instana/agent:latest
-  agent.zone.name: my-zone # (optional) name of the zone of the host
-  agent.key: replace-me # replace with your Instana agent key
-  agent.endpoint.host: ingress-red-saas.instana.io # the monitoring ingress endpoint
+    agent.image: myregistry.mydomain.io/instana/agent:latest
+    agent.zone.name: my-zone # (optional) name of the zone of the host
+    agent.key: replace-me # replace with your Instana agent key
+    agent.endpoint.host: ingress-red-saas.instana.io # the monitoring ingress endpoint
 
   ....
 
