@@ -5,6 +5,7 @@ This article explains about how to copy the docker images from docker hub to the
 - This will be useful for airgap installs. 
 - Bastion server or laptop which is having both public network acceess and cluster access to be used.
 - This requires cluster admin rights.
+- This can be used to copy the operators images in airgap, if we know all the images used by the operator.
 - The cluster we used here is RedHat OpenShift 4.6 on IBM Cloud (ROKS).
 
 <img src="images/image1.png">
@@ -159,7 +160,6 @@ podman load < instana-agent.tar
 
 You may see the output like this...
 
-verify podman works
 ```
 ......
 Copying config 771330101a done
@@ -197,7 +197,6 @@ root@kube-c279752d0qnkb1th7st0-waiops31ga2-default-000002ba tar]# podman images 
 localhost/instana/instana-agent-operator                                                        1.0.5                                      f43f02526f06   2 weeks ago     815 MB
 localhost/instana/agent                                                                         latest                                     f43f02526f06   2 weeks ago     815 MB
 docker.io/instana/agent                                                                         latest                                     f43f02526f06   2 weeks ago     815 MB
-docker.io/instana/agent                                                                         latestpodman                               f43f02526f06   2 weeks ago     815 MB
 docker.io/instana/instana-agent-operator                                                        1.0.5                                      f43f02526f06   2 weeks ago     815 MB
 
 ```
