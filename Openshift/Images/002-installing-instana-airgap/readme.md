@@ -39,16 +39,17 @@ To change the docker image name in the instana operator, we need to add `agent.i
 Reference : https://www.instana.com/docs/setup_and_manage/host_agent/on/kubernetes/#operator-configuration
 
 
-2. Add the below text under the `spec:` in the above yaml. Note: In earlier steps, we have taken `myregistry.mydomain.io` as a private registry.
+Add the below text under the `spec:` in the file `deploy/instana-agent.customresource.yaml`.
+
+Note: In earlier steps, we have taken `myregistry.mydomain.io` as a private registry.
 
 ```
-  agent.image: myregistry.mydomain.io/instana/agent:latest
+agent.image: myregistry.mydomain.io/instana/agent:latest
 ```
 
 The resulted file could look like this.
 
 ```
-
   ....
 
   spec:
@@ -58,7 +59,6 @@ The resulted file could look like this.
     agent.endpoint.host: ingress-red-saas.instana.io # the monitoring ingress endpoint
 
   ....
-
 
 ```
 
